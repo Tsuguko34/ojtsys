@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none !important;
+  color: #C41E3A !important;
+  transition: all 0.3s ease-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover{
+  color: #763435 !important;
+  transition: all 0.3s ease-out;
+}
+
+
+.LoginBody{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.image-box{
+  width: 100%;
+  height: 95vh;
+  object-fit: cover;
+  border-radius: 20px;
+  animation: moveImage 4s ease-in-out infinite alternate;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 100%;
+  padding: 50px 75px 0 75px;
+}
+
+.title{
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: serif;
+  margin-bottom: 30px;
+}
+
+.title small{
+  font-family: serif;
+  
+}
+
+.title.signup{
+  margin-bottom: 10px;
+}
+
+.title-signUp{
+  font-weight: bold;
+  color: #C41E3A;
+  font-size: 2rem;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-inputs{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-labels{
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0 !important;
+}
+
+.typewriter{
+  color: #C41E3A;
+  font-weight: bold;
+  font-family: serif !important;
+  font-size: 1.8rem;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-submit{
+  width: 100%;
+  background-color: #C41E3A !important;
+  border-color: #C41E3A !important;
+  transition: all 0.3s ease-out;
+  font-weight: bold !important;
+  margin-top: 30px;
+}
+
+.form-submit.signup{
+  margin-top: 0px;
+}
+
+.form-submit:hover{
+  background-color: #763435 !important;
+  border-color: #763435 !important;
+  transition: all 0.3s ease-out;
+}
+
+.link{
+  margin-top: 20px;
+}
+
+.fname-input{
+  padding: 0 10px 0 0 !important;
+}
+
+.lname-input{
+  padding: 0 0 0 10px !important;
+}
+
+@media only screen and (max-width: 1980px) {
+
+  .typewriter{
+    font-size: 1.7rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 1440px) {
+  .form-box{
+    padding: 20px 40px 0 40px;
+  }
+
+  .typewriter{
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .form-box{
+    padding: 20px 10px 0 10px;
+  }
+
+  .typewriter{
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .LoginBody{
+    justify-content: start;
+  }
+
+  .form-box{
+    padding: 20px 100px 0 100px;
+  }
+
+  .typewriter{
+    font-size: 2rem;
+  }
+
+  .image-container{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .LoginBody{
+    justify-content: start;
+  }
+
+  .form-box{
+    padding: 20px 10px 20px 10px;
+  }
+
+  .typewriter{
+    font-size: 1.5rem;
+  }
+
+  .image-container{
+    display: none;
+  }
+
+  .fname-input{
+    padding: 0 !important;
+  }
+  
+  .lname-input{
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .LoginBody{
+    justify-content: start;
+    padding: 10px;
+  }
+
+  .title{
+    font-size: 1.5rem;
+  }
+
+  .form-box{
+    padding: 20px 10px 10px 10px;
+  }
+
+  .typewriter{
+    font-size: 1.2rem;
+  }
+
+  .image-container{
+    display: none;
+  }
+
+  .fname-input{
+    padding: 0 !important;
+  }
+  
+  .lname-input{
+    padding: 0 !important;
   }
 }
